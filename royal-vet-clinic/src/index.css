@@ -1,13 +1,124 @@
+.App { 
+  min-height: 100vh;
+  background-image: url(https://img.freepik.com/premium-photo/cat-paws-stethoscope-blue-background-concept-veterinary-medicine-taking-care-pets-banner-copy-space_76158-859.jpg?w=2000);
+  background-size: cover;
+  background-position: right;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+
+.search {
+  margin: auto;
+  width: 50%;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:large;
+  text-align: center;
+}
+
+#search-div {
+  padding-bottom: 20px;
+}
+
+.new {
+  margin: auto;
+  width: 50%;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:x-large;
+  text-align: center;
+}
+
+.edit-patient {
+  margin: auto;
+  width: 40%;
+  padding-top: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:large;
+  text-align: left;
+  color: gray
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.item {
+  width: 16em;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#row {
+  justify-content: center;
+  padding-left:200px;
+  padding-right: 200px;
+}
+
+.vet-card {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-size: x-large;
+  padding-top: 30px;
+}
+
+.card-text {
+  color: gray;
+}
+
+br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: 10px; /* change this to whatever height you want it */
+}
+
+.header {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 30px;
+}
+
+#sub-header {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: x-large;
+}
+
+.button-div {
+
+  align-self: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.detail-card {
+  margin-top: 50px;
+}
+
+.button {
+  margin-left: 10px;
+  margin-right: 10px;
 }
