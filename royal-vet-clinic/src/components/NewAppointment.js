@@ -23,7 +23,8 @@ function NewAppointment({allpatients, vets, onAddAppointment}) {
     }
 
     function handleSubmit(e) {
-        e.preventDefault()
+         e.preventDefault()
+       console.log("error")
 
         const vet = vets.find((vet) => 
         vet.name === selectedVet)
@@ -36,7 +37,7 @@ function NewAppointment({allpatients, vets, onAddAppointment}) {
             veterinarian_id: vet.id,
             patient_id: patient.id,
             date: date,
-            time: time,
+            time: time
           };
   
           fetch("http://localhost:9292/appointments",

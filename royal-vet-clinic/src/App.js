@@ -13,7 +13,6 @@ import NewAppointment from "./components/NewAppointment";
 
 
 
-
 function App() {
 
   const [patients, setPatients] = useState([]);
