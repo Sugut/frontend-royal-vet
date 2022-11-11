@@ -29,6 +29,8 @@ We are a group of junior developers...
 
 here are our github links
 
+ -https://github.com/Sugut
+
  -https://github.com/ngisah
 
  -https://github.com/SERON19
