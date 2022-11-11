@@ -1,8 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 // import Button from 'react-bootstrap/Button';
-// import { useNavigate } from "react-router-dom";
-// import Patients from './Patients';
+// import { Link } from "react-router-dom";
+
 
 
 function PatientCard({patient}) {
@@ -14,9 +14,9 @@ function PatientCard({patient}) {
                 <Card.Title >{patient.name}</Card.Title>
                 <Card.Text> Animal Type: {patient.animal_type}
                 </Card.Text>
-                {/* <Link to={`/allpatients/${patient.id}`}> */}
-                {/* <Button variant="primary">Details</Button > */}
-                {/* </Link> */}
+                {/* <Link to={`/allpatients/${patient.id}`}> 
+                 <Button variant="primary">Details</Button >
+                </Link> */}
                 </Card.Body>
             </Card>
         </div>
