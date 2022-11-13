@@ -13,7 +13,7 @@ import NewAppointment from "./components/NewAppointment";
 import Courasel from './components/Courasel/Courasel';
 import Footer from "./components/Footer";
 import Appoints from "./components/Appoints";
-import Comments from "./components/Comments";
+
 
 function App() {
 
@@ -62,7 +62,6 @@ function App() {
       <NavBar />
       <Courasel/>
       <Routes>
-        <Route path="/comments" element={<Comments/>}/>
         <Route path="/appoints" element={<Appoints appointments={appointments} allpatients={patients} />} />
         <Route path="/allpatients" element={<Patients allpatients={patients}/>} />
         <Route path="/allpatients/:id" element={<PatientDetails allpatients={patients} appointments={appointments} onPatientDelete={deletePatient}/>} />
