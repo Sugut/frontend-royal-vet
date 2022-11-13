@@ -62,7 +62,7 @@ function App() {
       <NavBar />
       <Courasel/>
       <Routes>
-        <Route path="comments" element={<Comments/>}/>
+        <Route path="/comments" element={<Comments/>}/>
         <Route path="/appoints" element={<Appoints appointments={appointments} allpatients={patients} />} />
         <Route path="/allpatients" element={<Patients allpatients={patients}/>} />
         <Route path="/allpatients/:id" element={<PatientDetails allpatients={patients} appointments={appointments} onPatientDelete={deletePatient}/>} />
