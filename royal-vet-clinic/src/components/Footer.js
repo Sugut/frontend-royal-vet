@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Footer.css"
 
 function Footer() {
   return (
@@ -8,6 +9,9 @@ function Footer() {
       </div>
       <div className='footer_center'>
          <h6>Contacts</h6>
+         <p>Email: royalvet@gmail.com
+            Contact: 0712345678
+         </p>
       </div>
     </div>
   )

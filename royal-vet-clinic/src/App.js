@@ -68,8 +68,8 @@ function App() {
         <Route path="/editpatient/:id" element={<EditPatient allpatients={patients} onEditPatient={handleEdit}/>} />
         <Route path="/newappointment" element={<NewAppointment allpatients={patients} vets={vets} onAddAppointment={addAppointment}/>} />
         <Route path="/" element ={<Home allpatients={patients}/>} />
-        <Footer/>
       </Routes>
+      <Footer />
     </div>
   );
 };
