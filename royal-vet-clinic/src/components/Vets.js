@@ -17,7 +17,7 @@ function Vets({vets}) {
             <h3 className='title'>Veterinarians</h3>       
             <Row md={2} className="justify-content-md-center" id="row">
                 {renderVets}
-            </Row>
+            </Row>  
          </div>
     );
 }
