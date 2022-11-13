@@ -59,7 +59,7 @@ function PatientDetails({allpatients, appointments, onPatientDelete}) {
     return patient ? (
         <div className="container" key={patient.id}>
             <Card className="detail-card" style={{ width: '30rem'}}>
-                <h1 style={{textAlign: "center"}}>{patient.name}</h1>
+                <h1 style={{textAlign: "center"}}>{patient.id}</h1>
                 <ListGroup variant="list-group-flush">
                     <ListGroup.Item>Animal type: {patient.animal_type}</ListGroup.Item>
                     <ListGroup.Item>Breed: {patient.breed}</ListGroup.Item>

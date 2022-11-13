@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 
+
 function NavBar() {
   return (
     <Navbar bg="light" expand="lg">
@@ -16,6 +17,7 @@ function NavBar() {
             <Nav.Link href="/newpatient">New Patient</Nav.Link>
             <Nav.Link href="/newappointment">New Appointment</Nav.Link>
             <Nav.Link href="/appoints">Upcoming Appointments</Nav.Link>
+            <Nav.Link href="/comments">Comments</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

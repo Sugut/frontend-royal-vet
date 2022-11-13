@@ -1,25 +1,66 @@
 import React from 'react';
-import VetCard from './VetCard';
-import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card';
+import Accordion from 'react-bootstrap/Accordion';
 
+function VetCard({vet, appointments}) {
 
-function Vets({vets, appointments}) {
+    function getTime(appointment) {
 
+        const time = appointment.time.split('T')[1];
+        const hour = time.split(':')[0];
+        const minutes = time.split(':')[1];
+        let timeValue = ''
+        if (hour > 0 && hour <= 12) {
+            timeValue= "" + hour;
+          } else if (hour > 12) {
+            timeValue= "" + (hour - 12);
+          } else if (hour === 0) {
+            timeValue= "12";
+          }
 
-    const renderVets = vets.map((vet) => (
-        <div key={vet.id} className="item">
-            <VetCard vet={vet} appointments={appointments}/>
-        </div>
-    ));
+        const standardTime = timeValue + ':' + minutes;
+        const dayNight =  timeValue = (hour >= 12) ? " P.M." : " A.M."; 
+
+        return standardTime + dayNight
+
+    }
+
+    const vetAppointments = appointments.filter((appointment) => {
+       return appointment.veterinarian_id === vet.id
+    })
+    
+    const renderAppointments = vetAppointments.map((appointment) => {
+        const patient = appointment.patient
+        return patient ? (
+            <div key={appointment.id}>
+                <ul>
+                    <b>Patient: {patient.name}</b>
+                    <p>Date: {appointment.date}</p>
+                    <p>Time: {getTime(appointment)}</p>
+                </ul>
+            </div>
+        ) : undefined ;
+    })
+    
 
     return (
-        <div >
-            <h3 className='title'>Veterinarians</h3>       
-            <Row md={2} className="justify-content-md-center" id="row">
-                {renderVets}
-            </Row>
-         </div>
+        <div className='vet-card'>
+            <Card>
+                <Card.Body>
+                    <Card.Title>{vet.name}</Card.Title>
+                    <Card.Text>{vet.phone_number}</Card.Text>
+                    <Accordion>
+                        <Accordion.Item eventKey='1'>
+                            <Accordion.Header>Appointments</Accordion.Header>
+                            <Accordion.Body>
+                                <ul>{renderAppointments}</ul>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
+                </Card.Body>
+        </Card>
+    </div>
     );
 }
 
-export default Vets;
+export default VetCard;
