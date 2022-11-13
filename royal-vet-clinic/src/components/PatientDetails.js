@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
@@ -9,7 +9,7 @@ function PatientDetails({allpatients, appointments, onPatientDelete}) {
 
     const params = useParams();
     const patient = allpatients.find((patient) => patient.id === params.id);
-    const navigate = useNavigate();
+    
 
     function getTime(appointment) {
 
@@ -45,16 +45,15 @@ function PatientDetails({allpatients, appointments, onPatientDelete}) {
         );
     }) : <p>No appointments available</p>
 
-    function handleDelete() {
-        fetch(`http://localhost:9292/patients/${patient.id}`, {
-            method: "DELETE",
-        })
-        .then(r =>r.json())
-        .then(()=> {
-            onPatientDelete(patient)
-            navigate("/allpatients")
-        });
-    }
+    // function handleDelete() {
+    //     fetch(`http://localhost:9292/patients/${patient.id}`, {
+    //         method: "DELETE",
+    //     })
+    //     .then(r =>r.json())
+    //     .then(()=> {
+    //         onPatientDelete(patient)
+    //     });
+    // }
 
     return patient ? (
         <div className="container" key={patient.id}>
@@ -72,10 +71,7 @@ function PatientDetails({allpatients, appointments, onPatientDelete}) {
                     </ListGroup.Item>
                 </ListGroup>
                 <div className="button-div">
-                    <Button className="button" onClick={handleDelete}>Delete Patient</Button>
-                     <Link to={`/editpatient/${patient.id}`}>
-                        <Button className="button">Edit Patient Info</Button>
-                    </Link>
+                    <Button className="button" >Delete Patient</Button>
                 </div>
             </Card>
         </div>

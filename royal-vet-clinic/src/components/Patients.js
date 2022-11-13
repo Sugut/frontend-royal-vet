@@ -4,11 +4,11 @@ import CardGroup from 'react-bootstrap/CardGroup';
 
 
 
-function Patients({allpatients}) {
-
+function Patients({allpatients, setPatients}) {
+   
     const renderPatients = allpatients.map((patient) => (
         <div key={patient.id}>
-            <PatientCard patient={patient}/>
+            <PatientCard patient={patient} setPatients={setPatients}/>
         </div>
     ));
 

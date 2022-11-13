@@ -15,6 +15,7 @@ function NewPatient({onAddNewPatient}) {
 
     function handleSubmit(e){
         e.preventDefault()
+      
         const newPatient = {
           name: name,
           animal_type: animalType,
