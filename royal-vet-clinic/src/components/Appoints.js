@@ -1,13 +1,13 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
-
+import Form from 'react-bootstrap/Form';
+import "./Appoints.css"
 
 function Appoints() {
   return (
     <div>
-        <Card className="detail-card" style={{ width: '30rem'}}>
-            <h1>Upcoming Appointments</h1>
-        </Card>
+        <Form className="appoint-card" style={{ width: '30rem'}}>
+        <Form.Label>Upcoming Appointments</Form.Label>
+        </Form>
     </div>
 
   )
