@@ -24,24 +24,7 @@ function VetCard({vet, appointments}) {
         return standardTime + dayNight
 
     }
-
-    const vetAppointments = appointments.filter((appointment) => {
-       return appointment.veterinarian_id === vet.id
-    })
-    
-    const renderAppointments = vetAppointments.map((appointment) => {
-        const patient = appointment.patient
-        return patient ? (
-            <div key={appointment.id}>
-                <ul>
-                    <b>Patient: {patient.name}</b>
-                    <p>Date: {appointment.date}</p>
-                    <p>Time: {getTime(appointment)}</p>
-                </ul>
-            </div>
-        ) : undefined ;
-    })
-    
+ 
 
     return (
         <div className='vet-card'>
@@ -49,14 +32,6 @@ function VetCard({vet, appointments}) {
                 <Card.Body>
                     <Card.Title>{vet.name}</Card.Title>
                     <Card.Text>{vet.phone_number}</Card.Text>
-                    <Accordion>
-                        <Accordion.Item eventKey='1'>
-                            <Accordion.Header>Appointments</Accordion.Header>
-                            <Accordion.Body>
-                                <ul>{renderAppointments}</ul>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                    </Accordion>
                 </Card.Body>
         </Card>
     </div>
