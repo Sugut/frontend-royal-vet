@@ -34,7 +34,6 @@ function Search({patients}) {
         const search = filteredPatients.map((patient) => (
             <div key={patient.id}>
                 <PatientCard patient={patient}/>
-
             </div>
         ));
         setSearchedPatients(search)
@@ -70,4 +69,5 @@ function Search({patients}) {
 };
 
 export default Search;
+
 

@@ -66,4 +66,3 @@ function NewPatient({onAddNewPatient}) {
     );
 }
 export default NewPatient;
-

@@ -11,6 +11,4 @@ function Home({allpatients}) {
     );
 }
 
-
-
 export default Home;

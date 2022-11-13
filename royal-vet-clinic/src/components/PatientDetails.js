@@ -22,7 +22,7 @@ function PatientDetails({allpatients, appointments, onPatientDelete}) {
           } else if (hour > 12) {
             timeValue= "" + (hour - 12);
           } else if (hour === 0) {
-            timeValue= "12" 
+            timeValue= "12"
           }
 
         const standardTime = timeValue + ':' + minutes;

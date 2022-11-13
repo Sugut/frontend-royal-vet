@@ -23,4 +23,3 @@ function Patients({allpatients}) {
 }
 
 export default Patients;
-

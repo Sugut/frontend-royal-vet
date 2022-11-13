@@ -10,6 +10,7 @@ import NewPatient from "./components/NewPatient";
 import EditPatient from "./components/EditPatient";
 import Vets from "./components/Vets";
 import NewAppointment from "./components/NewAppointment";
+import Courasel from './components/Courasel/Courasel';
 
 
 
@@ -58,6 +59,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <Courasel/>
       <Routes>
         <Route path="/vets" element={<Vets vets={vets} appointments={appointments}/>} />
         <Route path="/allpatients" element={<Patients allpatients={patients}/>} />
