@@ -15,6 +15,7 @@ function NavBar() {
             <Nav.Link href="/allpatients">Patients</Nav.Link>
             <Nav.Link href="/newpatient">New Patient</Nav.Link>
             <Nav.Link href="/newappointment">New Appointment</Nav.Link>
+            <Nav.Link href="/appoints">Upcoming Appointments</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

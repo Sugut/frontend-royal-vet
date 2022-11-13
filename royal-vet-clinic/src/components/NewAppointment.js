@@ -50,7 +50,7 @@ function NewAppointment({allpatients, vets, onAddAppointment}) {
           .then(r => r.json())
           .then(appointment => {
                 onAddAppointment(appointment)
-                navigate("/vets")
+                navigate("/appoints")
             })
     }
 
