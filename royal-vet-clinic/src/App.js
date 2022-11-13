@@ -62,10 +62,10 @@ function App() {
       <Courasel/>
       <Routes>
         <Route path="/appoints" element={<Appoints appointments={appointments}/>} />
-        <Route path="/vets" element={<Vets vets={vets} appointments={appointments}/>} />
         <Route path="/allpatients" element={<Patients allpatients={patients}/>} />
         <Route path="/allpatients/:id" element={<PatientDetails allpatients={patients} appointments={appointments} onPatientDelete={deletePatient}/>} />
         <Route path="/newpatient" element={<NewPatient onAddNewPatient={addPatient} />} />
+        <Route path="vets" element={<Vets vets={vets}/>}/>
         <Route path="/editpatient/:id" element={<EditPatient allpatients={patients} onEditPatient={handleEdit}/>} />
         <Route path="/newappointment" element={<NewAppointment allpatients={patients} vets={vets} onAddAppointment={addAppointment}/>} />
         <Route path="/" element ={<Home allpatients={patients}/>} />

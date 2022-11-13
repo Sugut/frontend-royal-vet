@@ -1,5 +1,4 @@
 .appoint-card{
-    
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: auto;
     width: 50%;
@@ -7,9 +6,4 @@
     padding-top: 10px;
     font-size:large;
     text-align: center;
-    
-}
-.appoint-card h1{
-    font-size: 30px;
-
 }
