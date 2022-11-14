@@ -2,7 +2,7 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 
 function NewAppointment({allpatients, vets, onAddAppointment}) {
@@ -11,7 +11,7 @@ function NewAppointment({allpatients, vets, onAddAppointment}) {
     const [selectedPatient, setSelectedPatient] = useState('');
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
 
     function handleVetChange(e) {
@@ -50,7 +50,6 @@ function NewAppointment({allpatients, vets, onAddAppointment}) {
           .then(r => r.json())
           .then(appointment => {
                 onAddAppointment(appointment)
-                navigate("/appoints")
             })
     }
 
