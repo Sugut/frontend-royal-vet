@@ -1,19 +1,11 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 
-function PatientCard({patient, setPatients}) {
+function PatientCard({patient}) {
 
-    function handleDelete() {
-        fetch(`http://localhost:9292/patients/${patient.id}`, {
-            method: "DELETE",
-        })
-        .then(r =>r.json())
-        .then(()=> {
-            setPatients(patient)
-        });
-    }
     return (
         <div className="item"> 
             <Card >
@@ -21,7 +13,9 @@ function PatientCard({patient, setPatients}) {
                 <Card.Title >{patient.name}</Card.Title>
                 <Card.Text> Animal Type: {patient.animal_type}
                 </Card.Text>
-                <Button variant="primary"  onClick={handleDelete} >Delete</Button >
+                <Link to={`/allpatients/${patient.id}`}>
+                    <Button variant="primary" >Details</Button >
+                </Link>
                 </Card.Body>
             </Card>
         </div>

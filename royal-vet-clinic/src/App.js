@@ -65,7 +65,7 @@ function App() {
         <Route path="/appoints" element={<Appoints appointments={appointments} allpatients={patients} vets={vets}/>} />
         <Route path="/allpatients" element={<Patients allpatients={patients} setPatients={setPatients} onAddNewPatient={addPatient}/>} />
         <Route path="/allpatients/:id" element={<PatientDetails allpatients={patients} appointments={appointments} />} />
-        <Route path="/newpatient" element={<NewPatient  />} />
+        <Route path="/newpatient" element={<NewPatient onAddNewPatient={addPatient} />} />
         <Route path="/vets" element={<Vets vets={vets} />}/>
         <Route path="/editpatient/:id" element={<EditPatient allpatients={patients} onEditPatient={handleEdit}/>} />
         <Route path="/newappointment" element={<NewAppointment allpatients={patients} vets={vets} onAddAppointment={addAppointment}/>} />

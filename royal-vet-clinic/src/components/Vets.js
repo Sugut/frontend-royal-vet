@@ -8,7 +8,7 @@ function Vets({vets, appointments}) {
 
     const renderVets = vets.map((vet) => (
         <div key={vet.id} className="item">
-            <VetCard vet={vet} appointments={appointments}/>
+            <VetCard vet={vet} />
         </div>
     ));
 
